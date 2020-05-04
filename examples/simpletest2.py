@@ -57,3 +57,4 @@ while True:
 
     pwm.set_pwm(1, 0, servo_max/2)
     pwm.set_pwm(1, 0, servo_min)
+    
