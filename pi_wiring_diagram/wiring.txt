@@ -1,0 +1,6 @@
+Pi to PCA9685:
+
+GPIO 1 (3V3 power) to VCC
+GPIO 2 (SDA) to SDA
+GPIO 3 (SCL) to SCL
+Pin 6 (Ground) to GND
