@@ -8,7 +8,7 @@ pca = Adafruit_PCA9685.PCA9685()
 
 kit = ServoKit(channels=16)
 
-servo_0 = kit.servo[0]  # base joint
+servo_0 = kit.servo[0]  # base joint (MG996R)
 servo_1 = kit.servo[1]  # shoulder joint (MG996R)
 servo_2 = kit.servo[2]  # elbow joint (MG996R)
 servo_3 = kit.servo[3]  # wrist longitudinal rotation (MG996R)
