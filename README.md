@@ -1,5 +1,5 @@
 # Adafruit Python PCA9685 with ServoKit
-Python code to use the PCA9685 PWM servo/LED controller with a Raspberry Pi or BeagleBone black.
+Python code to use the PCA9685 PWM servo/LED controller with a Raspberry Pi or BeagleBone black using the ServoKit Python Module.
 
 ## Installation
 
