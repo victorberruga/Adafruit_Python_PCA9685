@@ -16,7 +16,7 @@ servo_4 = kit.servo[4]  # wrist perpendicular rotation (MG90S)
 servo_5 = kit.servo[5]  # gripper (MG90S)
 servo_list = [servo_0, servo_1, servo_2, servo_3, servo_4, servo_5]
 
-# Test ranges for all servos to determine their actuation range and pulse width range
+"""Test ranges for the all servos"""
 pca.frequency = 50
 servo_0.actuation_range = 180
 servo_0.set_pulse_width_range(800, 2600)
@@ -38,7 +38,6 @@ servo_5.set_pulse_width_range(800, 1500)
 
 
 # Function to smooth the shoulder servo suffering from heavy load
-# A degree must of been initialized prior to using this function
 def smooth_sm(sm, degree):  # sm - servo motor, degree - degree to move to
     if degree > sm.angle:
         while degree > sm.angle and (degree - sm.angle) >= 5:
@@ -60,7 +59,6 @@ def smooth_sm(sm, degree):  # sm - servo motor, degree - degree to move to
             time.sleep(0.5)
 
 
-# Simple Forward Kinematics
 # Home sequence of all joints
 servo_0.angle = 90
 servo_1.angle = 90
@@ -73,16 +71,24 @@ time.sleep(1)
 servo_5.angle = 0
 time.sleep(1)
 
-servo_0.angle = 180
-time.sleep(1)
+servo_0.angle = 15
+time.sleep(0.5)
 servo_2.angle = 120
-time.sleep(1)
+time.sleep(0.5)
 servo_1.angle = 45
+time.sleep(0.5)
+servo_4.angle = 30
+servo_3.angle = 75
 time.sleep(1)
-servo_4.angle = 150
-servo_3.angle = 180
-time.sleep(2)
 servo_5.angle = 100
 time.sleep(1)
+smooth_sm(servo_1, 0)
+servo_5.angle = 0
+time.sleep(2)
 
-
+servo_0.angle = 90
+servo_1.angle = 90
+servo_2.angle = 100
+servo_3.angle = 0
+servo_4.angle = 90
+time.sleep(1)
