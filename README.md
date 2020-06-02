@@ -7,9 +7,10 @@ To install the library from source (recommended) run the following commands on a
 
     sudo apt-get install git build-essential python-dev
     cd ~
-    git clone https://github.com/adafruit/Adafruit_Python_PCA9685.git
+    git clone https://github.com/victorberruga/Adafruit_Python_PCA9685_with_ServoKit.git
     cd Adafruit_Python_PCA9685
     sudo python setup.py install
+    sudo pip install adafruit-circuitpython-servokit
 
 Alternatively you can install from pip with:
 
